@@ -5,8 +5,7 @@ formulas for Emacs stuff.
 
  * `carton`
  
-   A formula for installing [carton](https://github.com/rejeep/carton)
-   - _Emacs dependency management made easy_
+   A formula for installing [carton](https://github.com/rejeep/carton) - _Emacs dependency management made easy_
    
  * `emacs-mac`
  
@@ -14,4 +13,4 @@ formulas for Emacs stuff.
    [emacs-mac-port](https://github.com/railwaycat/emacs-mac-port) -
    _git repo of emacs mac port(by Yamamoto Mitsuharu)_.
    
-   Nothing else in this formula than my pull request: railwaycat/emacs-mac-port#11
+   Nothing else in this formula than my pull request [#11](https://github.com/railwaycat/emacs-mac-port/pull/11).
