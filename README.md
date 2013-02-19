@@ -3,11 +3,11 @@ formulas for Emacs stuff.
 
 ## Formulas
 
- * `carton`
+ * [`carton`](Formula/carton.rb)
  
    A formula for installing [carton](https://github.com/rejeep/carton) - _Emacs dependency management made easy_
    
- * `emacs-mac`
+ * [`emacs-mac`](Formula/emacs-mac.rb)
  
    An improved version of the formula distributed together with
    [emacs-mac-port](https://github.com/railwaycat/emacs-mac-port) -
