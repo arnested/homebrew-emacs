@@ -11,6 +11,7 @@ class Carton < Formula
   end
 
   def test
+    Dir.chdir "#{prefix}"
     system "make", "all"
   end
 end
