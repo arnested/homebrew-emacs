@@ -16,9 +16,9 @@ When you get tired of me breaking stuff uninstall with:
  
    A formula for installing [carton](https://github.com/rejeep/carton).
    
- * [`emacs-mac`](Formula/emacs-mac.rb) - _Emacs Mac Port by Yamamoto Mitsuharu_
- 
-   An copy of the formula distributed together with
-   [emacs-mac-port](https://github.com/railwaycat/emacs-mac-port).
+There used to be a `emacs-mac` formula here as well. I removed it and
+instead refer you to the "official" formula:
 
-   Added here just to get in tap-form.
+     brew tap railwaycat/emacsmacport
+
+     brew install emacs-mac
