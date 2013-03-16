@@ -2,8 +2,8 @@ require 'formula'
 
 class Carton < Formula
   homepage 'https://github.com/rejeep/carton'
-  url 'https://github.com/rejeep/carton/archive/v0.1.1.zip'
-  sha1 '0c9eedde000d30f7c89c327d818ce0460b328019'
+  url 'https://github.com/rejeep/carton/archive/v0.1.2.zip'
+  sha1 '2c811658ff10e05e7fdbc45ec2310f3610545c9f'
   head 'https://github.com/rejeep/carton.git'
 
   def install
