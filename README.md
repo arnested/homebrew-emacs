@@ -14,7 +14,7 @@ When you get tired of me breaking stuff uninstall with:
 
  * [`cask-el`](Formula/cask-el.rb) - _Emacs dependency management made easy_
  
-   A formula for installing [cask](https://github.com/rejeep/cask.el).
+   A formula for installing [cask](https://github.com/cask/cask).
    
  * [`carton`](Formula/carton.rb) - _Old version of Cask (before the renaming)_
 
