@@ -23,7 +23,7 @@ When you get tired of me breaking stuff uninstall with:
 
  * [`emacs-drush`](Formula/emacs-drush.rb) - _Drush utilities for Emacs users_
 
-   A formuala for installing [Drush utilities for Emacs users](https://drupal.org/project/emacs_drush).
+   A formula for installing [Drush utilities for Emacs users](https://drupal.org/project/emacs_drush).
 
 There used to be a `emacs-mac` formula here as well. I removed it and
 instead refer you to the "official" formula:
