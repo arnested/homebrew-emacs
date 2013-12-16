@@ -27,7 +27,7 @@ class EmacsDrush < Formula
 
       To have Drush discover it either add the following to ~/.drush/drushrc.php:
 
-        $options['include'] = array('#{HOMEBREW_PREFIX}/share/drush/commands');
+        $options['include'][] = '#{HOMEBREW_PREFIX}/share/drush/commands';
 
       Or add this to your ~/.profile:
 
