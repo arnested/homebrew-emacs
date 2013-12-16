@@ -2,17 +2,16 @@ require 'formula'
 
 class CaskEl < Formula
   homepage 'https://github.com/cask/cask'
-  version '0.4.6'
-  url 'https://github.com/cask/cask.git', :tag => "v#{version}"
+  url 'https://github.com/cask/cask.git', :tag => 'v0.5.1'
   head 'https://github.com/cask/cask.git'
 
   def install
-    system "rm", "bin/carton"
-    prefix.install Dir["*"]
+    prefix.install Dir['*']
   end
 
   def test
-    Dir.chdir "#{prefix}"
-    system "make", "ecukes"
+    Dir.chdir prefix
+    system bin+'cask', 'install'
+    system 'make', 'test'
   end
 end
