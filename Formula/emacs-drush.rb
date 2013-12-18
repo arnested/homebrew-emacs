@@ -9,12 +9,15 @@ class EmacsDrush < Formula
 
   depends_on 'drush'
 
+  def drush_commands
+    HOMEBREW_PREFIX+'share'+'drush'+'commands'
+  end
+
   def install
     prefix.install Dir['*']
 
     # Link Emacs Drush into /usr/local/share/drush/commands for
     # integration with Drush.
-    drush_commands = HOMEBREW_PREFIX+'share'+'drush'+'commands'
     drush_commands.mkpath
     if File.symlink? drush_commands+name
       File.delete drush_commands+name
@@ -23,13 +26,13 @@ class EmacsDrush < Formula
   end
 
   def caveats; <<-EOS.undent
-      "Drush utilities for Emacs users" is linked to #{HOMEBREW_PREFIX}/share/drush/commands/emacs-drush.
+      "Drush utilities for Emacs users" is linked to #{drush_commands}/#{name}.
 
-      To have Drush discover it either add the following to ~/.drush/drushrc.php:
+      To have Drush discover it either add the following to drushrc.php:
 
-        $options['include'][] = '#{HOMEBREW_PREFIX}/share/drush/commands';
+        $options['include'][] = '#{drush_commands}';
 
-      Or add this to your ~/.profile:
+      Or add this to, i.e., your ~/.profile:
 
         export SHARE_PREFIX=$(brew --prefix)
 
