@@ -26,7 +26,7 @@ class EmacsDrush < Formula
   end
 
   def caveats; <<-EOS.undent
-      "Drush utilities for Emacs users" is linked to #{drush_commands}/#{name}.
+      "Drush utilities for Emacs users" is linked to "#{drush_commands+name}".
 
       To have Drush discover it either add the following to drushrc.php:
 
@@ -34,7 +34,7 @@ class EmacsDrush < Formula
 
       Or add this to, i.e., your ~/.profile:
 
-        export SHARE_PREFIX=$(brew --prefix)
+        export SHARE_PREFIX="$(brew --prefix)"
 
       If https://github.com/Homebrew/homebrew/pull/25245 is accepted Drush will
       recognize it automatically.
