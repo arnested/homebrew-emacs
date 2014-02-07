@@ -12,10 +12,6 @@ When you get tired of me breaking stuff uninstall with:
 
 ## Formulas
 
- * [`cask-el`](Formula/cask-el.rb) - _Emacs dependency management made easy_
- 
-   A formula for installing [cask](https://github.com/cask/cask).
-   
  * [`carton`](Formula/carton.rb) - _Old version of Cask (before the renaming)_
 
    Install version 0.3.1 of Carton (now Cask). In case you need it for
@@ -31,3 +27,9 @@ instead refer you to the "official" formula:
      brew tap railwaycat/emacsmacport
 
      brew install emacs-mac
+
+
+There also used to be a `cask-el` formula here. I removed it as well
+and instead refer you to the "official" formula:
+
+     brew install cask

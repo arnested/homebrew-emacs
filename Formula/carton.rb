@@ -1,9 +1,9 @@
+# -*- coding: utf-8 -*-
 require 'formula'
 
 class Carton < Formula
   homepage 'https://github.com/cask/cask'
-  version '0.3.1'
-  url 'https://github.com/cask/cask.git', :tag => "v#{version}"
+  url 'https://github.com/cask/cask.git', :tag => "v0.3.1"
   head 'https://github.com/cask/cask.git'
 
   def install
@@ -23,7 +23,7 @@ class Carton < Formula
 
     This formula install the last version of Carton (v0.3.1).
 
-    To install Cask use the cask-el formula from the arnested/emacs tap.
+    To install Cask use the 'cask' formula.
     EOS
   end
 end
