@@ -17,7 +17,7 @@ class GlobalPatched < Global
   conflicts_with 'global'
 
   def patches
-    "https://gist.github.com/arnested/8971896/raw/4ff003a8a879cc04aae052618c98020a34320dbb/gistfile1.txt"
+    "https://gist.github.com/arnested/8971896/raw/4ff003a8a879cc04aae052618c98020a34320dbb/find.patch"
   end
 
   def caveats; <<-EOS.undent
