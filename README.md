@@ -24,8 +24,8 @@ When you get tired of me breaking stuff uninstall with:
    with my [drupal-mode](https://github.com/arnested/drupal-mode) for
    Emacs.
 
-   The patch has been [https://drupal.org/node/2172383](submitted to
-   Drupal CoderSniffer).
+   The patch has been [submitted to
+   Drupal CoderSniffer](https://drupal.org/node/2172383).
 
  * [`emacs-drush`](Formula/emacs-drush.rb) - _Drush utilities for Emacs users_
 
