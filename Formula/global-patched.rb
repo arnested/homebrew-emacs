@@ -17,16 +17,21 @@ class GlobalPatched < Global
   conflicts_with 'global'
 
   def patches
-    { 'p0' => 'https://gist.github.com/arnested/8971896/raw/c673d9939d9f14ac9bfe9eb008abb2260741ef2b/glob.patch'}
-  end
+    { :p0 => [ 'https://gist.github.com/arnested/8971896/raw/c673d9939d9f14ac9bfe9eb008abb2260741ef2b/glob.patch',
+               'https://gist.github.com/arnested/8971896/raw/0a57e397352c83a4d02fa125ca763fba4be39a92/gtags-conf.patch' ] }
+   end
 
   def caveats; <<-EOS.undent
-    This version is patched to allow you to put a `*` in your skip lists.
+    This version is patched to allow you to put glob patterns in your
+    skip lists.
 
-    The `*` is converted to the regular expression `.*`.
+    The supported glob patterns are:
+
+      *, ?, [...], [!...], [^...]
+      ('!' and '^' means 'not')
 
     This version is patched to integrate better with Emacs flymake
-    inplace temporary files.
+    inplace temporary files (*_flymake*) and Emacs backup files (*~).
 
     See #{homepage}
     EOS
