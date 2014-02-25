@@ -28,9 +28,11 @@ class EmacsDrush < Formula
   def caveats; <<-EOS.undent
       "Drush utilities for Emacs users" is linked to "#{drush_commands+name}".
 
-      You can verify whether Drush has discovered the standard by running:
+      You can verify whether Drush has discovered the utilities by running either:
 
         drush etags --help
+
+        drush gtags --help
 
     EOS
   end
