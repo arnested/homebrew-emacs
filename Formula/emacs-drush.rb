@@ -28,16 +28,10 @@ class EmacsDrush < Formula
   def caveats; <<-EOS.undent
       "Drush utilities for Emacs users" is linked to "#{drush_commands+name}".
 
-      To have Drush discover it either add the following to drushrc.php:
+      You can verify whether Drush has discovered the standard by running:
 
-        $options['include'][] = '#{drush_commands}';
+        drush etags --help
 
-      Or add this to, i.e., your ~/.profile:
-
-        export SHARE_PREFIX="$(brew --prefix)"
-
-      If https://github.com/Homebrew/homebrew/pull/25245 is accepted Drush will
-      recognize it automatically.
     EOS
   end
 end
