@@ -18,7 +18,7 @@ class GlobalPatched < Global
 
   def patches
     { :p0 => [ 'https://gist.github.com/arnested/8971896/raw/c673d9939d9f14ac9bfe9eb008abb2260741ef2b/glob.patch',
-               'https://gist.github.com/arnested/8971896/raw/0a57e397352c83a4d02fa125ca763fba4be39a92/gtags-conf.patch' ] }
+               'https://gist.githubusercontent.com/arnested/8971896/raw/2ee412fb7eca2c33a0fe94a687937bb36dfd80b7/gtags-conf.patch' ] }
    end
 
   def caveats; <<-EOS.undent
@@ -31,7 +31,8 @@ class GlobalPatched < Global
       ('!' and '^' means 'not')
 
     This version is patched to integrate better with Emacs flymake
-    inplace temporary files (*_flymake*) and Emacs backup files (*~).
+    inplace temporary files (*_flymake.*,*_flymake) and Emacs backup
+    files (*~).
 
     See #{homepage}
     EOS
