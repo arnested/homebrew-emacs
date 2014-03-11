@@ -1,10 +1,10 @@
 This is a [Homebrew](https://github.com/mxcl/homebrew) Tap with
 formulas for Emacs stuff.
 
-Install with (it depends on
-[josegonzalez/php](https://github.com/josegonzalez/homebrew-php)):
+Install with (some formulas depends on
+[josegonzalez/php](https://github.com/josegonzalez/homebrew-php) and [homebrew/versions](https://github.com/Homebrew/homebrew-versions)):
 
-    brew tap arnested/emacs josegonzalez/php
+    brew tap arnested/emacs josegonzalez/php homebrew/versions
 
 When you get tired of me breaking stuff uninstall with:
 
