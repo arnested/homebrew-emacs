@@ -1,11 +1,15 @@
 require 'formula'
+require File.join(File.dirname(__FILE__), 'global')
 
 class GlobalPatched < Formula
 
   homepage 'https://gist.github.com/arnested/8971896'
-  # We just reuse the URL from global - because we have to have a URL.
-  url 'http://ftpmirror.gnu.org/global/global-6.2.11.tar.gz'
-  sha1 'b0f50213680ec3288988354c34e3b3ae1a42719e'
+  # We just reuse the URLs from global - because we have to have a URL
+  # and by reusing it we can skip downloading it again because it got
+  # cached while install the dependency.
+  url Global.new.stable.url
+  mirror Global.new.stable.mirrors
+  sha1 Global.new.stable.checksum.to_s
 
   # Now depend on global.
   depends_on 'global'
