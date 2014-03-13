@@ -31,7 +31,7 @@ When you get tired of me breaking stuff uninstall with:
 
    A formula for installing [Drush utilities for Emacs users](https://drupal.org/project/emacs_drush).
 
- * [`global-patched`](Formula/global-patched.rb) - _A patched version of GNU GLOBAL_
+ * Deprecated: [`global-patched`](Formula/global-patched.rb) - _A patched version of GNU GLOBAL_
 
    This version of GNU GLOBAL is patched to allow you to put wildcards
    (`*`) in your skip lists.
@@ -40,6 +40,11 @@ When you get tired of me breaking stuff uninstall with:
 
    This version is patched to integrate better with Emacs flymake
    inplace temporary files.
+
+   This formula is deprecate. The patch has added in
+   [global](https://github.com/Homebrew/homebrew/blob/master/Library/Formula/global.rb). I
+   have tried to create a nice upgrade path and then you should
+   uninstall global-patched.
 
 There used to be a `emacs-mac` formula here as well. I removed it and
 instead refer you to the "official" formula:
