@@ -1,18 +1,15 @@
-# -*- coding: utf-8 -*-
-require 'formula'
-
 class Carton < Formula
-  homepage 'https://github.com/cask/cask'
-  url 'https://github.com/cask/cask.git', :tag => 'v0.3.1'
-  head 'https://github.com/cask/cask.git'
+  homepage "https://github.com/cask/cask"
+  version "0.3.1"
+  url "https://github.com/cask/cask.git", :revision => "v#{version}"
+  head "https://github.com/cask/cask.git"
 
   def install
-    prefix.install Dir['*']
+    prefix.install Dir["*"]
   end
 
-  def test
-    Dir.chdir "#{prefix}"
-    system 'make', 'all'
+  test do
+    system "#{bin}/carton", "--help"
   end
 
   def caveats; <<-EOS.undent

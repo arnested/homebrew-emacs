@@ -1,20 +1,18 @@
-require 'formula'
-
 class EmacsDrush < Formula
-  homepage 'https://drupal.org/project/emacs_drush'
-  version '7.x-1.2'
+  homepage "https://drupal.org/project/emacs_drush"
+  version "7.x-1.2"
   url "http://ftp.drupal.org/files/projects/emacs_drush-#{version}.tar.gz"
-  head 'http://git.drupal.org/project/emacs_drush.git', :branch => '7.x-1.x'
-  sha1 '914fb5766aec5b652adc623c93ba8ef4d9196076'
+  head "http://git.drupal.org/project/emacs_drush.git", :branch => "7.x-1.x"
+  sha256 "68fd73412649170bbe9056945ae3f2148322ac89a8080be52f28a4f46950c40e"
 
-  depends_on 'drush'
+  depends_on "drush"
 
   def drush_commands
-    HOMEBREW_PREFIX+'share'+'drush'+'commands'
+    HOMEBREW_PREFIX+"share"+"drush"+"commands"
   end
 
   def install
-    prefix.install Dir['*']
+    prefix.install Dir["*"]
 
     # Link Emacs Drush into /usr/local/share/drush/commands for
     # integration with Drush.
@@ -23,6 +21,11 @@ class EmacsDrush < Formula
       File.delete drush_commands+name
     end
     drush_commands.install_symlink prefix => name
+  end
+
+  test do
+    system "drush", "etags", "--help"
+    system "drush", "gtags", "--help"
   end
 
   def caveats; <<-EOS.undent
